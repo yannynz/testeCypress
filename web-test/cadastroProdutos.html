@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+//rodei o código no navegador via live-server e passou no teste do cypress
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    label, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Produtos</h1>
+  
+  <form id="productForm">
+    <label for="name">Nome do Produto:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="price">Preço:</label>
+    <input type="number" id="price" name="price" required>
+
+    <label for="quantity">Quantidade:</label>
+    <input type="number" id="quantity" name="quantity" required>
+
+    <input type="submit" value="Cadastrar Produto">
+  </form>
+
+  <script>
+    document.getElementById('productForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Produto cadastrado com sucesso!');
+    });
+  </script>
+</body>
+</html>
+
